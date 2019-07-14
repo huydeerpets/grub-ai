@@ -32,10 +32,12 @@ class Recipes extends Component {
 
     return (
       <StackGrid
-        gridRef={grid => this.grid = grid} 
-        columnWidth={220}
+        columnWidth={260}
         monitorImagesLoaded={true}
-        duration={600}>
+        gutterWidth={15}
+        gutterHeight={20}
+        duration={600}
+        className="recipes-container">
         {this.renderRecipes()}
       </StackGrid>
     )

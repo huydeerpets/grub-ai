@@ -1,29 +1,39 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+body {
+    margin: 0;  
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+}
+
 /******* Recipe /*******/
+
+.recipes-container {
+    margin: 0 3rem 0 3rem;
+}
 
 .recipe {
     margin: 0 15px 15px 0;
-    border: 1px solid #E7E7E7;
-    width: 213px;
-    box-shadow: 3px 3px 16px -6px rgba(0,0,0,1);
-    border-radius: 6px 6px 6px 6px;
+    width: 250px;
     position: relative;
-    background-color: #F8F8F8;
+    background-color: #FFFBE6;
   }
   
+.recipe:hover {
+    box-shadow: 3px 3px 10px -6px rgba(0,0,0,1);
+}
+  
   .recipe-desc {
-    margin: 3px 0 15px 0px;
-    padding-bottom: 8px;
+    margin: 12px 0 12px 0px;
+    padding-bottom: 15px;
     text-align: center;
     background-color: #F8F8F8;
-    border-bottom: 1px solid #E7E7E7;
-    color: #777777;
+    color: #FD5523;
     font-size: 15px;
   }
   
   .recipe-img {
-    max-width: 213px;
-    clip-path: polygon(0 0, 100% 0, 100% 86%, 0% 100%);
-    border-radius: 6px 6px 6px 0;
+    max-width: 252px;
   }
   
   .recipe-img:hover {
@@ -32,5 +42,4 @@
 
   .recipe-info-wrapper {
     background-color: white;
-    border-radius: 6px 6px 6px 6px;
   }

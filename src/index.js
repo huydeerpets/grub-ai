@@ -15,7 +15,7 @@ const render = () => {
   fancyLog();
 	ReactDOM.render(
 		<Provider store={store}>
-				<div>
+				<div className="container">
 						<Recipes />
 				</div>
 		</Provider>

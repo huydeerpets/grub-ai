@@ -6,6 +6,22 @@ body {
     font-family: "Montserrat", sans-serif;
 }
 
+/******* HEADER /*******/
+
+nav {
+    padding-top: 2px;
+  }
+
+  .navbar-brand-link {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .navbar-brand-link:hover {
+    text-decoration: none;
+    color: inherit;
+  }
+
 /******* Recipe /*******/
 
 .recipes-container {
@@ -42,4 +58,12 @@ body {
 
   .recipe-info-wrapper {
     background-color: white;
+  }
+
+  /******* OTHER /*******/
+
+.ajax-loader {
+    display: block;
+    margin: auto;
+    margin-top: 150px;
   }

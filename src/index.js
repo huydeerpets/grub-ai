@@ -3,8 +3,10 @@ import ReactDOM from 'react-dom';
 import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import reducers from './reducers';
-import thunk from 'redux-thunk'
+import thunk from 'redux-thunk';
+import 'bootstrap/dist/css/bootstrap.css';
 
+import Header from './containers/header'
 import Recipes from './containers/recipes';
 import './assets/css/styles.css';
 
@@ -15,9 +17,8 @@ const render = () => {
   fancyLog();
 	ReactDOM.render(
 		<Provider store={store}>
-				<div className="container">
-						<Recipes />
-				</div>
+			<Header/>
+			<Recipes />
 		</Provider>
 		, document.getElementById('root')
 	);

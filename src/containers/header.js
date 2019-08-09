@@ -4,11 +4,24 @@ import * as actions from '../actions';
 
 class Header extends Component {
 
-  renderList() {
+  renderUserNavList() {
     return (
       <ul className="nav navbar-nav navbar-right">
         <li className="sign-in nav-item auth-nav-item">
           <a href="/"><i className="fa fa-twitter" aria-hidden="true"></i>Sign In</a>
+        </li>
+      </ul>
+    );
+  }
+
+  renderNavList() {
+    return (
+      <ul className="nav navbar-toolbar">
+        <li className="toolbar-item active">
+          <a href="/">MY LIBRARY</a>
+        </li>
+        <li className="toolbar-item dropdown">
+          <a href="/">ADD RECIPE</a>
         </li>
       </ul>
     );
@@ -24,9 +37,8 @@ class Header extends Component {
                 <h1 className="navbar-brand-link">GrubAI</h1>
               </div>
             </div>
-            <div>
-              {this.renderList()}
-            </div>
+              {this.renderNavList()}
+              {this.renderUserNavList()}
           </div>
         </nav>
       </div>

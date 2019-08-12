@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import RecipeTitle from '../components/RecipeTitle';
 import RecipeImage from '../components/RecipeImage';
+import * as actions from '../actions';
 
 class Recipe extends Component {
 
   handleRecipeImgClick() {
-
+    this.props.setModalRecipe(this.props.recipe);
+    this.props.openImageZoomModal();
   }
 
   render() {
@@ -25,4 +28,9 @@ class Recipe extends Component {
   }
 };
 
-export default Recipe;
+const mapStateToProps = state => {
+  return {
+  };
+};
+
+export default connect(mapStateToProps, actions)(Recipe);

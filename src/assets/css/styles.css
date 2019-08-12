@@ -101,6 +101,41 @@ nav {
     background-color: white;
   }
 
+  /******* MODAL /*******/
+
+  .modal {
+    display: block;
+    position: relative;
+    top: 100px;
+    padding-bottom: 25px;
+    background-color: white;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-width: 1140px;
+    min-width: 755px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+  .modal-img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 2;
+  }
+
   /******* OTHER /*******/
 
 .ajax-loader {

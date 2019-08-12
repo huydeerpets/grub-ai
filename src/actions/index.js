@@ -21,3 +21,15 @@ export const showError = error => {
 export const resetError = () => {
   return { type: types.RESET_ERROR };
 };
+
+export const openImageZoomModal = () => {
+  return { type: types.OPEN_IMAGE_ZOOM_MODAL };
+};
+
+export const hideImageZoomModal = () => {
+  return { type: types.CLOSE_IMAGE_ZOOM_MODAL };
+};
+
+export const setModalRecipe = pin => {
+  return { type: types.SET_MODAL_RECIPE, payload: pin };
+};

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import * as actions from '../actions';
+import ImageZoomModal from './image_zoom_modal';
 
 class Header extends Component {
 
@@ -41,6 +42,7 @@ class Header extends Component {
               {this.renderUserNavList()}
           </div>
         </nav>
+        <ImageZoomModal isOpen="false"/>
       </div>
     );
   }

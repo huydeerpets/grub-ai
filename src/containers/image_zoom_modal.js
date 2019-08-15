@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Modal from 'react-modal';
 import { connect } from 'react-redux';
 import * as actions from '../actions';
-import Close from '@material-ui/icons/Close';
+import { MdClose } from 'react-icons/md';
 
 class ImageZoomModal extends Component {
 
@@ -15,7 +15,7 @@ class ImageZoomModal extends Component {
           className="display-modal"
           overlayClassName="overlay" >
           <div className="modal-toolbar">
-            <Close className="modal-close-button" onClick={() => this.props.hideImageZoomModal()}/>
+            <MdClose className="modal-close-button" onClick={() => this.props.hideImageZoomModal()}/>
           </div>
           <div className="display-modal-content">
             <img src={this.props.recipe.strMealThumb}/>

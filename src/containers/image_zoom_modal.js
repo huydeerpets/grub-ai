@@ -17,7 +17,7 @@ class ImageZoomModal extends Component {
           <div className="modal-toolbar">
             <Close className="modal-close-button" onClick={() => this.props.hideImageZoomModal()}/>
           </div>
-          <div className="modal-content">
+          <div className="display-modal-content">
             <img src={this.props.recipe.strMealThumb}/>
             <div className="display-modal-desc">
               <h3 className="display-modal-title">{this.props.recipe.strMeal}</h3>

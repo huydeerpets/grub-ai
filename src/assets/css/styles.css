@@ -11,6 +11,7 @@ body {
 
 nav {
   padding-top: 2px;
+  margin-bottom: 2em;
 }
 
 .container-fluid {
@@ -35,34 +36,57 @@ nav {
   margin: 0 1em;
 }
 
-.toolbar-item a {
-  font-size: 0.8em;
+.toolbar-item a, .dd-header-title {
+  font-size: 0.9em;
   color: #525252;
   text-decoration: none;
-  padding-bottom: 1px
+  padding-bottom: 1px;
 }
 
 .toolbar-item.active a{
   font-weight: 800;
 }
 
-.toolbar-item:hover {
+.toolbar-item:hover, .dd-header-title:hover {
+  font-weight: 800;
+  border-bottom: 1px solid #000; 
+  cursor: pointer;
+}
+
+.dd-header-title, .dd-header-arrow {
+  display: inline-block;
+}
+
+.dd-header-title-open {
+  font-size: 0.9em;
+  color: #525252;
+  text-decoration: none;
+  padding-bottom: 1px;
+  display: inline-block;
   font-weight: 800;
   border-bottom: 1px solid #000; 
 }
 
-.dropdown:after {
-  content: "";
+.dd-list {
   position: absolute;
-  right: -15px;
-  top: 40%;
-  width: 0; 
-  height: 0; 
-  border-left: 5px solid transparent;
-  border-right: 5px solid transparent;
-  border-top: 5px solid #525252;
+  list-style: none;
+  right: 20px;
+  top: 30px;
+  z-index: 5;
+  transition: all 5.5s;
 }
 
+.dd-list-item {
+  font-size: 0.9em;
+  color: #525252;
+  text-decoration: none;
+  text-align: right;
+}
+
+.dd-list-item:hover {
+  font-weight: 800;
+  cursor: pointer;
+}
 
 /******* Recipe /*******/
 

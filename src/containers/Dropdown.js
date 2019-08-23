@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaAngleUp, FaAngleDown } from "react-icons/fa";
+import { taggedTemplateExpression } from '@babel/types';
 
 class Dropdown extends React.Component {
   handleClickOutside(){
@@ -20,6 +21,9 @@ class Dropdown extends React.Component {
       headerTitle: this.props.title
     }
   }
+  test() {
+    console.log("test");
+  }
 
   render(){
     const{list} = this.props
@@ -37,7 +41,8 @@ class Dropdown extends React.Component {
       </div>
   {listOpen && <ul className="dd-list">
          {list.map((item) => (
-           <li className="dd-list-item" key={item.id} >{item.title}</li>
+           <li className="dd-list-item" key={item.id} onClick={item.modal}>
+           {item.title}</li>
           ))}
         </ul>}
       </div>

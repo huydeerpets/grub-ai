@@ -13,6 +13,14 @@ export default (state = initialState, action) => {
     case types.SET_MODAL_RECIPE:
       return { ...state, recipe: action.payload };
 
+    case types.OPEN_ADD_RECIPE_MODAL:
+      return { ...state,  addRecipeModalType: action.payload, 
+        addRecipeModalIsOpen: true };
+
+    case types.CLOSE_ADD_RECIPE_MODAL:
+      return { ...state,  addRecipeModalType: action.payload, 
+        addRecipeModalIsOpen: false };
+
     default:
       return state;
   }

@@ -72,7 +72,7 @@ nav {
   list-style: none;
   right: 20px;
   top: 30px;
-  z-index: 5;
+  z-index: 2;
   transition: all 5.5s;
 }
 

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import * as actions from '../actions';
 import ImageZoomModal from './image_zoom_modal';
+import AddRecipeModal from './add_recipe_modal';
 import Dropdown from './Dropdown';
 
 class Header extends Component {
@@ -23,13 +24,15 @@ class Header extends Component {
         id: 0,
         title: 'URL',
         selected: false,
-        key: 'url'
+        key: 'url',
+        modal: () => this.props.openAddRecipeModal('url')
       },
       {
         id: 1,
         title: 'Manual',
         selected: false,
-        key: 'manual'
+        key: 'manual',
+        modal: () => this.props.openAddRecipeModal('manual')
       },
     ]
 
@@ -63,6 +66,7 @@ class Header extends Component {
           </div>
         </nav>
         <ImageZoomModal isOpen="false"/>
+        <AddRecipeModal isOpen="false"/>
       </div>
     );
   }

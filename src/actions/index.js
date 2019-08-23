@@ -33,3 +33,12 @@ export const hideImageZoomModal = () => {
 export const setModalRecipe = pin => {
   return { type: types.SET_MODAL_RECIPE, payload: pin };
 };
+
+export const openAddRecipeModal = type => {
+  return { type: types.OPEN_ADD_RECIPE_MODAL, payload: type };
+};
+
+export const closeAddRecipeModal = type => {
+  return { type: types.CLOSE_ADD_RECIPE_MODAL, payload: type };
+
+};

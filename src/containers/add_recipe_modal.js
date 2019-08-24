@@ -11,15 +11,27 @@ class AddRecipeModal extends Component {
       <Modal 
         isOpen={this.props.isOpen} 
         onRequestClose={this.props.hideAddRecipeModal}
-        className="display-modal"
+        className="add-recipe-modal"
         overlayClassName="overlay" >
         <div className="modal-toolbar">
           <MdClose className="modal-close-button" onClick={() => this.props.closeAddRecipeModal()}/>
         </div>
-        <div className="display-modal-content">
-          <div className="display-modal-desc">
+        {this.props.addRecipeType === "url" ? 
+          <div className="add-recipe-modal-content">
+            <h2 className="add-recipe-title">Add Recipe by URL</h2>
+            <form id="add-recipe-url-bar">
+              <input id="add-recipe-url" type="text" placeholder="Enter URL here..."/>
+              <button className="add-recipe-button" type="button">Search</button>
+            </form>
+            <div className="display-modal-desc">
+            </div>
           </div>
-        </div>
+          : 
+          <div className="display-modal-content">
+            <div className="display-modal-desc">
+            </div>
+          </div>
+        }
       </Modal>
     )
   }

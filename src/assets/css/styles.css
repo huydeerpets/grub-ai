@@ -209,6 +209,50 @@ nav {
   z-index: 2;
 }
 
+.add-recipe-modal {
+  display: block;
+  position: relative;
+  top: 75px;
+  padding-bottom: 25px;
+  background-color: white;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  max-width: 912px;
+  margin: 0 auto;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.add-recipe-modal-content {
+  position: relative;
+  background-color: white;
+  border: none;
+  font-family: 'Roboto';
+}
+
+.add-recipe-title {
+  text-align: center;
+  font-family: 'Montserrat';
+  font-size: 1.5em;
+  margin-bottom: 1em;
+}
+
+#add-recipe-url-bar {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 1em;
+}
+
+#add-recipe-url {
+  width: 70%;
+  outline: none;
+  padding-left: 0.5em;
+}
+
 /******* OTHER /*******/
 
 .ajax-loader {

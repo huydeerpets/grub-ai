@@ -3,8 +3,45 @@ import Modal from 'react-modal';
 import { connect } from 'react-redux';
 import * as actions from '../actions';
 import { MdClose } from 'react-icons/md';
+import { Form, Button } from 'react-bootstrap';
+import ImagePlaceholder from '../assets/img/image-placeholder-square.png';
 
 class AddRecipeModal extends Component {
+
+  renderAddRecipeByURL() {
+    return (
+      <div className="add-recipe-modal-container">
+        <h2 className="add-recipe-title">Add Recipe by URL</h2>
+        <form id="add-recipe-url-bar">
+          <input id="add-recipe-url" type="text" placeholder="Enter URL here..."/>
+          <button className="add-recipe-button" type="button">Search</button>
+        </form>
+      </div> 
+    )
+  }
+
+  renderAddRecipeManually() {
+    return (
+      <div className="add-recipe-modal-container">
+        <h2 className="add-recipe-title">Add Recipe Manually</h2>
+        <div className="add-recipe-modal-content">
+          <img src={ImagePlaceholder}/>
+          <div className="display-modal-desc">
+            <Form>
+              <Form.Group controlId="formGroupTitle">
+                <Form.Label>Title</Form.Label>
+                <Form.Control />
+              </Form.Group>
+
+              <Button variant="primary" type="submit">
+                Submit
+              </Button>
+            </Form>
+          </div>
+        </div>
+      </div>
+    )
+  }
 
   renderModal() {
     return (
@@ -17,20 +54,7 @@ class AddRecipeModal extends Component {
           <MdClose className="modal-close-button" onClick={() => this.props.closeAddRecipeModal()}/>
         </div>
         {this.props.addRecipeType === "url" ? 
-          <div className="add-recipe-modal-content">
-            <h2 className="add-recipe-title">Add Recipe by URL</h2>
-            <form id="add-recipe-url-bar">
-              <input id="add-recipe-url" type="text" placeholder="Enter URL here..."/>
-              <button className="add-recipe-button" type="button">Search</button>
-            </form>
-            <div className="display-modal-desc">
-            </div>
-          </div>
-          : 
-          <div className="display-modal-content">
-            <div className="display-modal-desc">
-            </div>
-          </div>
+          this.renderAddRecipeByURL() : this.renderAddRecipeManually()
         }
       </Modal>
     )

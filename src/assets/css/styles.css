@@ -88,10 +88,18 @@ nav {
   cursor: pointer;
 }
 
+/******* Fragment Container /*******/
+
+.fragment-container {
+  display: block;
+  padding: 0 5em;
+
+}
+
 /******* Recipe /*******/
 
-.recipes-container {
-    margin: 0 5em 0 5em;
+.masonry-grid {
+  margin: 0 auto;
 }
 
 .recipe {

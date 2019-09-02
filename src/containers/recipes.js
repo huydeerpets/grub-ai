@@ -30,7 +30,8 @@ class Recipes extends Component {
     if (!this.props.allRecipes) return <img className="ajax-loader" src={ajaxLoader} />;
 
     const masonryOptions = {
-      transitionDuration: 800
+      transitionDuration: 800,
+      fitWidth: true
     };
     return (
       <div className="recipes-container">

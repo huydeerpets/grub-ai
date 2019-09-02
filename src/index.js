@@ -7,7 +7,7 @@ import thunk from 'redux-thunk';
 import 'bootstrap/dist/css/bootstrap.css';
 
 import Header from './containers/header'
-import Recipes from './containers/recipes';
+import FragmentContainer from './containers/FragmentContainer'
 import './assets/css/styles.css';
 
 const createStoreWithMiddleware = applyMiddleware(thunk)(createStore);
@@ -18,7 +18,7 @@ const render = () => {
 	ReactDOM.render(
 		<Provider store={store}>
 			<Header/>
-			<Recipes />
+			<FragmentContainer/>
 		</Provider>
 		, document.getElementById('root')
 	);

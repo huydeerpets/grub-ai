@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import * as actions from '../actions';
-import StackGrid from 'react-stack-grid';
-import ReactResizeDetector from 'react-resize-detector'
 import Recipe from './recipe';
 import ajaxLoader from '../assets/img/ajax_loader.gif';
+import Masonry from 'react-masonry-component';
 
 class Recipes extends Component {
 
@@ -30,17 +29,23 @@ class Recipes extends Component {
   render() {    
     if (!this.props.allRecipes) return <img className="ajax-loader" src={ajaxLoader} />;
 
+    const masonryOptions = {
+      transitionDuration: 800
+    };
     return (
-      <StackGrid
-        columnWidth={260}
-        monitorImagesLoaded={true}
-        gutterWidth={15}
-        gutterHeight={20}
-        duration={600}
-        className="recipes-container">
-        {this.renderRecipes()}
-      </StackGrid>
-    )
+      <div className="recipes-container">
+        <Masonry
+          enableResizableChildren={true}
+          className={'masonry-grid'}
+          elementType={'div'}
+          options={masonryOptions}
+          disableImagesLoaded={false}
+          updateOnEachImageLoad={false}>
+          {this.renderRecipes()}
+        </Masonry>
+      </div>
+      
+    );
   ;}
 }
 

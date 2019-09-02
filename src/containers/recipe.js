@@ -13,7 +13,7 @@ class Recipe extends Component {
 
   render() {
     const { recipe } = this.props;
-    const imgSource = recipe.strMealThumb;
+    const imgSource = recipe.image_url;
 
     return (
       <div className="recipe">
@@ -21,7 +21,7 @@ class Recipe extends Component {
           <RecipeImage source={imgSource} onClick={this.handleRecipeImgClick.bind(this)} />
         </div>
         <div className="recipe-info-wrapper">
-            <RecipeTitle title={recipe.strMeal} />
+            <RecipeTitle title={recipe.title} />
         </div>
       </div>
     );

@@ -19,7 +19,7 @@ class Recipes extends Component {
     else {
       return this.props.allRecipes.map(recipe => {
         return (
-          <div key={recipe.idMeal}>
+          <div key={recipe.id}>
             <Recipe className="recipe" recipe={recipe} />
           </div>
         );

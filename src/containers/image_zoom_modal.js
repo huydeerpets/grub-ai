@@ -18,9 +18,9 @@ class ImageZoomModal extends Component {
             <MdClose className="modal-close-button" onClick={() => this.props.hideImageZoomModal()}/>
           </div>
           <div className="display-modal-content">
-            <img src={this.props.recipe.strMealThumb}/>
+            <img src={this.props.recipe.image_url}/>
             <div className="display-modal-desc">
-              <h3 className="display-modal-title">{this.props.recipe.strMeal}</h3>
+              <h3 className="display-modal-title">{this.props.recipe.title}</h3>
             </div>
           </div>
         </Modal>
